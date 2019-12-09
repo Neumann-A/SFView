@@ -26,8 +26,11 @@ file(GLOB RC_FILES *.rc)
 # Do not need to doo that yet!
 #qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 #QT5_ADD_TRANSLATION( QT_TRANSLATIONS_FILES )
-
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES} ${RC_FILES} ${TS_FILES})
+if(WIN32)
+        add_executable(${PROJECT_NAME} WIN32 ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES} ${RC_FILES} ${TS_FILES})
+else()
+        add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES} ${RC_FILES} ${TS_FILES})
+endif()
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets Qt5::Charts Qt5::Gui Qt5::DataVisualization Qt5::Svg Qt5::DBus)
 
 
