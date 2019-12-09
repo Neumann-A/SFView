@@ -20,13 +20,14 @@ file(GLOB CPP_FILES *.cpp)
 file(GLOB UI_FILES *.ui)
 file(GLOB H_FILES *.h)
 file(GLOB QRC_FILES *.qrc)
+file(GLOB RC_FILES *.rc)
 #file(GLOB TS_FILES *.ts)
 
 # Do not need to doo that yet!
 #qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 #QT5_ADD_TRANSLATION( QT_TRANSLATIONS_FILES )
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES} ${TS_FILES})
+add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES} ${RC_FILES} ${TS_FILES})
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets Qt5::Charts Qt5::Gui Qt5::DataVisualization Qt5::Svg Qt5::DBus)
 
 
@@ -34,7 +35,7 @@ if(TRUE) # if static build:
     if(WIN32)
         set_property(TARGET ${PROJECT_NAME} PROPERTY
                      MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-        target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QXdgDesktopPortalThemePlugin Qt5::QWindowsIntegrationPlugin Qt5::QWindowsVistaStylePlugin Qt5::QWindowsDirect2DIntegrationPlugin)
+        target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QXdgDesktopPortalThemePlugin Qt5::QWindowsIntegrationPlugin Qt5::QWindowsVistaStylePlugin)
         target_link_libraries(${PROJECT_NAME} PRIVATE UxTheme)
     elseif(UNIX)
         find_package(Qt5 CONFIG REQUIRED COMPONENTS QXdgDesktopPortalThemePlugin)
