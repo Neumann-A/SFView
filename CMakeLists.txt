@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.7 FATAL_ERROR)
+cmake_minimum_required (VERSION 3.15 FATAL_ERROR)
 include(cmake/init_vcpkg.cmake)
 include(cmake/init_cmake.cmake)
 # Find the QtWidgets library
