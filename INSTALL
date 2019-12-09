@@ -1,0 +1,40 @@
+Installing SFView
+=================
+
+SFView can be compiled for Windows or Linux computers. The following description only deals with the compilation for Linux.
+Windows users are encouraged to use Qt Creator for compilation.
+
+1) Preconditions
+SFView uses the Qt toolkit, version 4.7.x or higher, including 5.x versions. This must be installed including the development files.
+Qt can be obtained from http://qt-project.org/downloads, but in many cases it is available prepackaged in your Linux installation.
+Please ensure that the development packages (typically called qt4-devel) are also installed.
+
+2) Unpacking
+Place the file SFView.tar.gz into a directory of your choice, open a terminal window, navigate to the chosen directory and unpack the archive by
+ 
+  tar xvfz SFView.tar.gz
+
+This will create a new directory SFView containing all source files.
+
+3) Creating a build directory
+Besides the source folder, create a build folder by typing
+
+  mkdir build-sfview
+
+4) Configuring the build
+Type the following commands:
+
+  cd build-sfview
+  qmake -o Makefile ../SFView
+
+If this fails, please check whether Qt is correctly installed and the qmake tool is in your search path.
+
+5) Building
+Build the application by typing
+
+  make release
+
+6) Testing
+You can start the application from the build directory by typing
+
+  ./SFView

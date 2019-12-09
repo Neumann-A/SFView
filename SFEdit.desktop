@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Exec=SFEdit %f
+Icon=sfedit.png
+MiniIcon=sfedit.png
+DocPath=SFView/index.html
+Categories=Science;Editor;Magnetic Particle Imaging
+MimeType=application/x-bruker-mpi-systemmatrix
+Comment=A tool for analyzing and editing MPI system functions
+Comment[de]=Dateibetrachter/editor für MPI-Systemfunktionen
+Terminal=0
+Name=SFEdit
+Name[de]=SFEdit

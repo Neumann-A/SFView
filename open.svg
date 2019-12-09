@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="121.02mm" height="94.29mm" viewBox="4536 5236 12102 9429" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="4536" y="5236" width="12102" height="9429"/>
+  </clipPath>
+ </defs>
+ <defs class="TextEmbeddedBitmaps"/>
+ <g class="SlideGroup">
+  <g>
+   <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+    <g class="Page">
+     <g class="Group">
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id3">
+        <rect class="BoundingBox" stroke="none" fill="none" x="4538" y="6422" width="12101" height="8244"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="529" stroke-linejoin="round" d="M 10143,8170 L 10143,6687 16373,6687 16373,14400 4803,14400 4803,8170 10143,8170 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id4">
+        <rect class="BoundingBox" stroke="none" fill="none" x="4535" y="5235" width="6841" height="3794"/>
+        <path fill="rgb(0,0,0)" stroke="none" d="M 10143,8170 L 4803,8170 4803,8763 4800,8763 4800,5500 11110,5500 11110,6687 10143,6687 10143,8170 Z"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="529" stroke-linejoin="round" d="M 10143,8170 L 4803,8170 4803,8763 4800,8763 4800,5500 11110,5500 11110,6687 10143,6687 10143,8170 Z"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="application/x-bruker-mpi-systemmatrix">
+        <comment>MPI-Systemmatrix</comment>
+        <generic-icon name="mpi-systemmatrix"/>
+        <glob pattern="systemMatrix"/>
+        <glob pattern="systemMatrixBG"/>
+    </mime-type>
+</mime-info>

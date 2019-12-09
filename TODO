@@ -1,0 +1,8 @@
+Obvious deficiencies & future ideas:
+
+- Speed up interpolation with user-defineable threshold
+- Add SNR statistics plot
+- Add profile views
+- Add online documentation and help system
+- Tidy up source code
+- Allow filtering from reconstructed dataset

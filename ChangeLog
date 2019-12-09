@@ -1,0 +1,34 @@
+2017-03-19 - Preparations for moving support for Bruker System function into subclass
+           - Official 1.0 release for IWMPI 2017
+2017-02-28 - Port experimental spectral plot to QtCharts and promote to official feature
+           - Place Phase view in separate tool
+2017-02-05 - Build on 64Bit -Windows with MSVC2015
+2017-01-27 - Fix bugs in coefficient navigation (no update of harmonic and mixing depth)
+           - Fix integer overflows in SystemMatrix class which occured for large datasets
+2017-01-25 - Improved phase view
+2016-12-11 - Add stretchable icons, include toolbar configuration
+           - Maintain color scales in separate infrastructure
+2016-11-09 - Color scale starts at value 0 by default now (configurable)
+           - Show phase labels in phase plot
+           - Show variance in phase plot (configurable)
+           - Fix issue where navigation spinboxes were no longer updated.
+2016-09-23 - Turn phase viewer into "official" feature
+2016-09-22 - Experimental PhaseView function is now linked to main viewer
+           - Voxel highlighting works vice versa
+2016-03-29 - Compilation under Qt4 and Qt5 supported
+           - Compilation under Windows supported
+           - Windows icon added
+2016-03-09 - Support loading files from the command line
+2016-03-01 - Internal preparations for a spectrum display
+2016-02-25 - Minor layouting corrections
+           - Minor corrections for mixing term update mechanism
+2016-02-15 - Protect longrunning operations with safety dialog.
+2016-02-12 - Adjust color legend for single slice view
+           - Add display of information about acquisition system
+           - Add Undo function in edit mode
+2016-02-07 - Switch to new modification table format, import for old format including silent conversion.
+2016-02-05 - Removed [backgroundCorrection] state from SystemMatrix, which is now stateless again.
+           - Implementation of pixel interpolation for both corrected and uncorrected data.
+           - Update of modification table format.
+2016-01-14 - Added versioning to binary modification table.
+           - Restrict voxel correction to the background corrected data for now.

@@ -1,0 +1,13 @@
+SFVIEW
+======
+
+(c) 2014-2017 Ulrich Heinen <ulrich.heinen@hs-pforzheim.de>
+
+This is a simple viewer for MPI system functions acquired on the Bruker Preclinical MPI system.
+
+Note that this application is not developed or maintained by Bruker.
+
+It is provided under the terms of the General Public License, Version 2, see file COPYING.
+
+In particular this implies that there is no warranty or any official support for this application,
+which is provided with the aim of being useful but no such claims are made.

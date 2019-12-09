@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Exec=SFView %f
+Icon=sfview.png
+MiniIcon=sfview.png
+DocPath=SFView/index.html
+Categories=Science;Viewer;Magnetic Particle Imaging
+MimeType=application/x-bruker-mpi-systemmatrix
+Comment=A tool for analyzing MPI system functions
+Comment[de]=Dateibetrachter für MPI-Systemfunktionen
+Terminal=0
+Name=SFView
+Name[de]=SFView

@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>title_and_license.txt</file>
+        <file>open.svg</file>
+        <file>copy.svg</file>
+        <file>exit.svg</file>
+        <file>xyplane.svg</file>
+        <file>xzplane.svg</file>
+        <file>yzplane.svg</file>
+        <file>ticks.svg</file>
+        <file>smoothscaling.svg</file>
+        <file>legend.svg</file>
+        <file>settings.svg</file>
+        <file>bgcorr.svg</file>
+        <file>zoomIn.svg</file>
+        <file>zoomOut.svg</file>
+        <file>zoomReset.svg</file>
+    </qresource>
+    <qresource lang="de" prefix="/">
+        <file alias="SFView.qm">SFView_de.qm</file>
+    </qresource>
+</RCC>
