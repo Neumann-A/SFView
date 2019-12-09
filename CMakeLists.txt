@@ -1,4 +1,8 @@
-cmake_minimum_required (VERSION 3.15 FATAL_ERROR)
+if(WIN32)
+    cmake_minimum_required (VERSION 3.15 FATAL_ERROR)
+elseif(UNIX)
+    cmake_minimum_required (VERSION 3.7 FATAL_ERROR)
+endif()
 include(cmake/init_vcpkg.cmake)
 include(cmake/init_cmake.cmake)
 # Find the QtWidgets library
@@ -10,7 +14,7 @@ project(SFView
         HOMEPAGE_URL "http://it.hs-pforzheim.de/personen/heinen/software/sfview.html"
         LANGUAGES CXX)
 
-find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Widgets)
+find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Widgets Charts)
 
 file(GLOB CPP_FILES *.cpp)
 file(GLOB UI_FILES *.ui)
@@ -18,6 +22,6 @@ file(GLOB H_FILES *.h)
 file(GLOB QRC_FILES *.qrc)
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES})
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets Qt5::Charts)
 set_property(TARGET ${PROJECT_NAME} PROPERTY
   MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
