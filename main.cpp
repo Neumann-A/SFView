@@ -35,13 +35,15 @@
 
 #ifdef WIN32
 Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+Q_IMPORT_PLUGIN(QWindowsVistaStylePlugin)
 #endif
 Q_IMPORT_PLUGIN(QICOPlugin)
 Q_IMPORT_PLUGIN(QJpegPlugin)
 Q_IMPORT_PLUGIN(QICNSPlugin)
 Q_IMPORT_PLUGIN(QGifPlugin)
 Q_IMPORT_PLUGIN(QTgaPlugin)
-Q_IMPORT_PLUGIN(QTiffPlugin)
+Q_IMPORT_PLUGIN(QSvgIconPlugin)
+//Q_IMPORT_PLUGIN(QTiffPlugin)
 
 int main ( int argc, char ** argv ) {
     QApplication app ( argc, argv );

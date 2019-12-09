@@ -14,7 +14,7 @@ project(SFView
         HOMEPAGE_URL "http://it.hs-pforzheim.de/personen/heinen/software/sfview.html"
         LANGUAGES CXX)
 
-find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Widgets Charts Gui DataVisualization)
+find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Widgets Charts Gui DataVisualization Svg)
 
 
 
@@ -24,18 +24,18 @@ file(GLOB H_FILES *.h)
 file(GLOB QRC_FILES *.qrc)
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES})
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets Qt5::Charts Qt5::Gui Qt5::DataVisualization)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets Qt5::Charts Qt5::Gui Qt5::DataVisualization Qt5::Svg)
 
 
 if(TRUE) # if static build:
     if(WIN32)
         set_property(TARGET ${PROJECT_NAME} PROPERTY
                      MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-        target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QXdgDesktopPortalThemePlugin Qt5::QWindowsIntegrationPlugin)
+        target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QXdgDesktopPortalThemePlugin Qt5::QWindowsIntegrationPlugin Qt5::QWindowsVistaStylePlugin)
     elseif(UNIX)
         find_package(Qt5 CONFIG REQUIRED COMPONENTS QXdgDesktopPortalThemePlugin)
     endif()
     
     find_package(TIFF REQUIRED)
-    target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QICOPlugin Qt5::QJpegPlugin Qt5::QICNSPlugin Qt5::QGifPlugin Qt5::QTgaPlugin Qt5::QTiffPlugin Qt5::QXdgDesktopPortalThemePlugin TIFF::TIFF)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QICOPlugin Qt5::QJpegPlugin Qt5::QICNSPlugin Qt5::QGifPlugin Qt5::QTgaPlugin Qt5::QTiffPlugin Qt5::QXdgDesktopPortalThemePlugin TIFF::TIFF Qt5::QSvgIconPlugin)
 endif()
