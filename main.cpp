@@ -33,16 +33,22 @@
 // Local includes
 #include "SFView.h"
 
-#ifdef WIN32
-Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
-Q_IMPORT_PLUGIN(QWindowsVistaStylePlugin)
+#ifdef WIN32 
+    #ifdef QT_STATIC
+        Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+        Q_IMPORT_PLUGIN(QWindowsVistaStylePlugin)
+    #endif
 #endif
-Q_IMPORT_PLUGIN(QICOPlugin)
-Q_IMPORT_PLUGIN(QJpegPlugin)
-Q_IMPORT_PLUGIN(QICNSPlugin)
-Q_IMPORT_PLUGIN(QGifPlugin)
-Q_IMPORT_PLUGIN(QTgaPlugin)
-Q_IMPORT_PLUGIN(QSvgIconPlugin)
+
+#ifdef QT_STATIC
+    Q_IMPORT_PLUGIN(QXdgDesktopPortalThemePlugin)
+    Q_IMPORT_PLUGIN(QICOPlugin)
+    Q_IMPORT_PLUGIN(QJpegPlugin)
+    Q_IMPORT_PLUGIN(QICNSPlugin)
+    Q_IMPORT_PLUGIN(QGifPlugin)
+    Q_IMPORT_PLUGIN(QTgaPlugin)
+    Q_IMPORT_PLUGIN(QSvgIconPlugin)
+#endif
 
 int main ( int argc, char ** argv ) {
     QApplication app ( argc, argv );

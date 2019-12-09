@@ -15,6 +15,7 @@
         <file>zoomIn.svg</file>
         <file>zoomOut.svg</file>
         <file>zoomReset.svg</file>
+        <file>SFView.ico</file>
     </qresource>
     <qresource lang="de" prefix="/">
         <file alias="SFView.qm">SFView_de.qm</file>
