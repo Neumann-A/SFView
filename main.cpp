@@ -28,16 +28,26 @@
 #endif
 #include <QtCore/QTranslator>
 #include <QtCore/QDebug>
+#include <QtPlugin>
 
 // Local includes
 #include "SFView.h"
 
+#ifdef WIN32
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+#endif
+Q_IMPORT_PLUGIN(QICOPlugin)
+Q_IMPORT_PLUGIN(QJpegPlugin)
+Q_IMPORT_PLUGIN(QICNSPlugin)
+Q_IMPORT_PLUGIN(QGifPlugin)
+Q_IMPORT_PLUGIN(QTgaPlugin)
+Q_IMPORT_PLUGIN(QTiffPlugin)
 
 int main ( int argc, char ** argv ) {
     QApplication app ( argc, argv );
     QStringList arguments = app.arguments();
     bool editor=(arguments.first().contains("SFEdit")) ||
-                ((arguments.first().contains("SFView")) && arguments.contains("-edit"));
+                ((arguments.first().contains("SFView")) && arguments.contains("-edit", Qt::CaseSensitive));
     app.setOrganizationName("HS_Pforzheim");
     app.setApplicationName("SFView");
     QTranslator translator;
