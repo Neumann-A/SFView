@@ -16,14 +16,17 @@ project(SFView
 
 find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Widgets Charts Gui DataVisualization Svg)
 
-
-
 file(GLOB CPP_FILES *.cpp)
 file(GLOB UI_FILES *.ui)
 file(GLOB H_FILES *.h)
 file(GLOB QRC_FILES *.qrc)
+#file(GLOB TS_FILES *.ts)
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES})
+# Do not need to doo that yet!
+#qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+#QT5_ADD_TRANSLATION( QT_TRANSLATIONS_FILES )
+
+add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${H_FILES} ${QRC_FILES} ${TS_FILES})
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Widgets Qt5::Charts Qt5::Gui Qt5::DataVisualization Qt5::Svg)
 
 
@@ -37,5 +40,5 @@ if(TRUE) # if static build:
     endif()
     
     find_package(TIFF REQUIRED)
-    target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QICOPlugin Qt5::QJpegPlugin Qt5::QICNSPlugin Qt5::QGifPlugin Qt5::QTgaPlugin Qt5::QTiffPlugin Qt5::QXdgDesktopPortalThemePlugin TIFF::TIFF Qt5::QSvgIconPlugin)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::QICOPlugin Qt5::QJpegPlugin Qt5::QICNSPlugin Qt5::QGifPlugin Qt5::QTgaPlugin Qt5::QSvgIconPlugin)
 endif()

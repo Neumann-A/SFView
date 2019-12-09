@@ -43,7 +43,6 @@ Q_IMPORT_PLUGIN(QICNSPlugin)
 Q_IMPORT_PLUGIN(QGifPlugin)
 Q_IMPORT_PLUGIN(QTgaPlugin)
 Q_IMPORT_PLUGIN(QSvgIconPlugin)
-//Q_IMPORT_PLUGIN(QTiffPlugin)
 
 int main ( int argc, char ** argv ) {
     QApplication app ( argc, argv );
