@@ -89,15 +89,15 @@ SpectralPlot::SpectralPlot(QWidget *parent) :
     d->chartView->setRubberBand(QtCharts::QChartView::RectangleRubberBand);
     d->chartView->show();
 
-    QAction * a = new QAction(QIcon(":/zoomReset"),tr("Reset zoom"));
+    QAction * a = new QAction(QIcon(":/zoomReset.svg"),tr("Reset zoom"));
     d->toolBar->addAction(a);
     connect(a,SIGNAL(triggered(bool)),SLOT(resetZoom()));
 
-    a = new QAction(QIcon(":/zoomIn"),tr("Zoom in"));
+    a = new QAction(QIcon(":/zoomIn.svg"),tr("Zoom in"));
     d->toolBar->addAction(a);
     connect(a,SIGNAL(triggered(bool)),SLOT(zoomIn()));
 
-    a = new QAction(QIcon(":/zoomOut"),tr("Zoom out"));
+    a = new QAction(QIcon(":/zoomOut.svg"),tr("Zoom out"));
     d->toolBar->addAction(a);
     connect(a,SIGNAL(triggered(bool)),SLOT(zoomOut()));
 }
