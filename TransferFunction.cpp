@@ -24,6 +24,7 @@
 #include <vector>
 
 // Qt includes
+#include <QDataStream>
 #include <QFile>
 #include <QList>
 #include <QTextStream>
